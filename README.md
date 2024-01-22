@@ -16,7 +16,7 @@ Step 2: Navigate to `http://localhost:5000/` !
  
 p/s: you should pass mount directory path with mongo :
 
-change line :- /home/duy/Flask-mongo-example/db_storage in docker-compose.ml file to your real directory
+change line : /home/duy/Flask-mongo-example/db_storage in docker-compose.ml file to your real directory
 
 Step 3 : Use the app and add student 
 
