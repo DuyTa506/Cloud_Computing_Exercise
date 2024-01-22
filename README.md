@@ -1,12 +1,11 @@
 # How to run Flask application and mongo using docker compose :
 
 ## Prerequisite :
-Step 0 :
- 
+
 ```
 pip install -r requirements.txt
 ```
-
+## Run and test :
  step 1: Run
 
 ```
