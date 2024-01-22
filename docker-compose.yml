@@ -1,0 +1,25 @@
+version: '3'
+services:
+  flask-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "5000:5000"
+    depends_on:
+      - mongo-db
+    networks:
+      - my-network
+
+  mongo-db:
+    image: mongo:4.0.4
+    ports:
+      - "27017:27017"
+    volumes:
+      - /home/duy/Flask-mongo-example/db_storage:/data/db
+    container_name: test-mongo
+    networks:
+      - my-network
+
+networks:
+  my-network:

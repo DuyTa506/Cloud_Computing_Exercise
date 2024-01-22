@@ -1,0 +1,35 @@
+<html>
+   <head>
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/student.css') }}">
+   </head>
+   <body >
+      <br>
+      <hr>
+      <h1>Student Grades Database </h1>
+      <hr>
+     <h2>Add new Student </h2>
+   <form id="student_form"  action = "http://localhost:5000/result" method = "POST">
+       <p>
+         <label>Student Name </label>
+     <input type = "text" name = "Name" />
+     </p>
+     <p><label>Physics </label>
+         <input type = "text" name = "Physics" /></p>
+     <p>
+       <label>Chemistry </label>
+       <input type = "text" name = "Chemistry"/></p>
+     
+     <p>
+       <label>
+       Maths</label>
+       <input type ="text" name = "Mathematics" /></p>
+    <br/>
+     <input type = "submit" id="submit" value = "Submit Grades" />
+      </form>
+     <br>
+      <form id ="form_s" action = "http://localhost:5000/fulllist" method = "GET">
+         <input type = "submit" 
+                id="getAll"
+                value = "Get Grades of all Students"  />      </form>
+   </body>
+</html>

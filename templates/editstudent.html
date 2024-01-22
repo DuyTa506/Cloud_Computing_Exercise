@@ -1,0 +1,30 @@
+<html>
+   <head>
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/editstudent.css') }}">
+   </head>
+      <body>
+         <h2 style="color:rgb(7, 3, 194);"> Edit existing students grades  </h2>
+        <br/>
+        
+         <form action = "http://localhost:5000/result" method = "POST">
+           <p><label>Student Name</label> <input type = "text" name = "Name", value = {{sname}} /></p>
+           <p><label>Physics</label> <input type = "text" name = "Physics" value = {{obj.Physics}} /></p>
+           <p><label>Chemistry </label><input type = "text" name = "Chemistry" value = {{obj.Chemistry}} /></p>
+           <p><label>Maths</label> <input type ="text" name = "Mathematics" value = {{obj.Mathematics}} /></p>
+            <input id="submit"
+                      type = "submit" value = "Submit Grades" />
+         </form>
+
+      <br>
+      <br>
+        <form id ="form_s" class="actionsForm" action = "http://localhost:5000/fulllist" method = "GET">
+            <p>
+              <input type = "submit"  style="background-color:lightgreen;"
+                     value = "Get Grades of all Students"  /> </p>
+         </form>
+      <form class="actionsForm" action="http://localhost:5000/">
+      <p>
+         <input type = "submit"  style="background-color:rgb(146, 144, 238);" value = "Go to Homepage"  /></p>
+        </form>
+        </body>
+</html>

@@ -1,0 +1,31 @@
+<!-- edit.html -->
+<!doctype html>
+<html>
+   <head>
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/edit.css') }}">
+   </head>
+   <body>
+      <p>
+         <h2>Old Grades</h2>
+         <table  id="myTable" border = 1>
+            {% for key, value in old_result.items() %}
+               <tr>
+                  <th> {{ key }} </th>
+                  <td> {{ value }} </td>
+               </tr>
+            {% endfor %}
+         </table>
+      </p>
+      <p>
+         <h2>New Grades</h2>
+         <table id="myTable"  border = 1>
+         {% for key, value in result.items() %}
+            <tr>
+               <th> {{ key }} </th>
+               <td> {{ value }} </td>
+            </tr>
+         {% endfor %}
+      </table>
+   </p>
+   </body>
+</html>

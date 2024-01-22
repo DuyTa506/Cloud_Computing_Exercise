@@ -1,0 +1,3 @@
+flask
+pymongo==3.12.0
+dnspython

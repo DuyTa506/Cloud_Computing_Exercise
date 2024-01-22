@@ -1,0 +1,43 @@
+<!-- print.html  -->
+<html>
+    <head>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/print.css') }}">
+     </head>
+   <body>
+       <center>
+      <p>
+         <h2>List of Students and Grades</h2>
+         <br><br>
+         <table id="myTable" border = 1 style="background-color:rgb(179, 204, 208); width:60%" >
+            {% for ttl in headings %}
+                <td><center><b> {{ ttl }} </b></center></td> 
+            {% endfor %}
+            {% for key, value in dict.items() %}
+            <tr>
+
+                            {% for sub, grade in value.items() %}
+                                {% if sub == 'Name' %}
+                                    <td > <center> <a href="http://localhost:5000/studenteditlink/{{key}}">{{ grade }}</a> <center> </td>
+                                {%else%}
+                                    <td> <center> {{ grade }} </center> </td>
+                                {%endif%}
+
+                            {% endfor %}
+            </tr>
+            {% endfor %}
+            
+         </table>
+      </p>
+      </center>
+   </body>
+
+   <br><br><br>
+    <center>
+        <form action="http://localhost:5000/">
+            <p><input type = "submit" 
+                      id="submit"
+                      value = "Go to Homepage"  /></p> 
+        </form>
+    </center>
+
+<html>
